@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	size_t len = 0;
+	/**
+	 * msg - Message to write to stderr
+	 */
+	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	while (*(msg + len))
-		len++;
+	/* Write message to stderr */
+	write(STDERR_FILENO, msg, sizeof(msg) - 1);
 
-	if (write(STDERR_FILENO, msg, len) != len)
-		return (1);
 	return (1);
 }

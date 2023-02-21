@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h> // add this line to include the declaration of _putchar()
+#include <stdio.h>
 
 /**
  * main - print Holberton as a message.
@@ -15,8 +15,8 @@ int main(void)
         sz = sizeof(str) / sizeof(int);
         for (count = 0; count < sz; count++)
         {
-                putchar(str[count]); // change _putchar to putchar
+                putchar(str[count]);
         }
-        putchar('\n'); // change _putchar to putchar
+        putchar('\n');
         return (0);
 }
